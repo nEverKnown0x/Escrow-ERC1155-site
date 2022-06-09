@@ -1,0 +1,29 @@
+<html>
+    <link rel="stylesheet" href="./style.css"></link>
+    <title>TRADE ERC1155</title>
+    <body>
+        <div>
+            <button id="mint-btn">mint test nft</button><br>
+        </div>
+        <div>
+            <button id="createEscrow-btn">sell nft</button><br>
+            <input id="nftContract-inp" value="0x">nft contract address</input><br>
+            <input id="nftID-inp" value="1">nft ID</input><br>
+            <input id="nftAmount-inp" value="1">amount of nfts</input><br>
+            <input id="tokenRecieve-inp" value="0x">token in exchange</input><br>
+            <input id="etherRecieve-inp">amount of tokens</input><br>
+        </div>
+        <div>
+            <button id="getEscrow-btn">view sell order with uuid</button>
+            <button id="removeEscrow-btn">remove sell order with uuid</button>
+            <button id="executeEscrow-btn">buy nft with uuid</button><br>
+            <input id="uuid-inp" value="big number, ask seller">uuid</input><br>
+        </div>
+        <div>
+            <button id="getMyEscrowUUIDs-btn">view my sell order uuids</button>
+            <button id="getMyEscrows-btn">view my sell orders</button>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </body>
+    <script src="./main.js"></script>
+</html>
