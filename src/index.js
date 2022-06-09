@@ -6,7 +6,6 @@ import Addresses from './contract_data/Addresses';
     let addressNFT;
     let addressEscrow;
     await bcInterface.load();
-    console.log(await bcInterface.getChain());
     setChainSpecificContracts(await bcInterface.getChain());
 
     await ethereum.on('chainChanged', async(chainId) => {
@@ -39,7 +38,7 @@ import Addresses from './contract_data/Addresses';
 
     document.getElementById('mint-btn').addEventListener('click', async () => {
         let cID = await bcInterface.getChain();
-        if (cID != 42 || cID != 4 || cID != 5) {
+        if (cID != 42 && cID != 4 && cID != 5) {
             alert("i do not have gas to cover deployment on mainnets. kovan, rinkeby, and goerli testnests available");
         } else {
             await bcInterface.mint(addressNFT);
